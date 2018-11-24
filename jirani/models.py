@@ -90,23 +90,23 @@ class Comment(models.Model):
         self.delete()
 
 
-# class Business(models.Model):
-#     name = models.CharField(max_length=20)
-#     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-#     business_description = models.TextField(max_length=80)
-#     locale = models.ForeignKey(Hood, related_name='location')
-#     # category = models.CharField(max_length=20)
-#     business_number = models.IntegerField(default=0)
-#
-#     def save_business(self):
-#         self.save()
-#
-#     def delete_business(self):
-#         self.delete()
-#
-#     @classmethod
-#     def get_business(cls, name):
-#         business = Business.objects.filter(name=name)
-#         return business
-#
-#     # def update_business(self,id):
+class Business(models.Model):
+    name = models.CharField(max_length=20)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    business_description = models.TextField(max_length=80)
+    locale = models.ForeignKey(Hood, related_name='location')
+    # category = models.CharField(max_length=20)
+    business_number = models.IntegerField(default=0)
+
+    def save_business(self):
+        self.save()
+
+    def delete_business(self):
+        self.delete()
+
+    @classmethod
+    def get_business(cls, name):
+        business = Business.objects.filter(name=name)
+        return business
+
+    # def update_business(self,id):
