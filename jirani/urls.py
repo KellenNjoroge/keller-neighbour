@@ -3,4 +3,18 @@ from . import views
 
 urlpatterns=[
     url('^$',views.welcome,name = 'welcome'),
+    url('^$',views.index,name='index'),
+    url('^search/',views.search,name='search'),
+    url('profile/$', views.profile, name='profile'),
+    url('^hood/(\w+)', views.hood, name='hood'),
+    url('^update/$', views.update, name='update'),
+    url('^addbiz/$', views.newbiz, name='addbiz'),
+    url('^newpost/$', views.newpost, name='newpost'),
+    url('^newhood/$', views.newhood, name='newhood'),
+    url('^profilehood/(\w+)$', views.profilehood, name='profilehood'),
+    url('^choosehood/$',views.choosehood,name='choosehood'),
+    url('^business/(\w+)$', views.business, name='business'),
+    url('^communities/$',views.communities,name='communities'),
+    url('^comment/(\d+)', views.comment, name='comment'),
+    url('^join/(\d+)', views.join, name='join'),
 ]
