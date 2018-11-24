@@ -43,53 +43,53 @@ class Hood(models.Model):
 #         return self.user.username
 #
 #
-# # class Hood(models.Model):
-# #     name = models.CharField(max_length=20,unique=True)
-# #     residents = models.IntegerField(default=1)
-# #     county = models.CharField(max_length=20)
-# #
-# #     def save_hood(self):
-# #         self.save()
-# #
-# #     def remove_hood(self):
-# #         self.delete()
-# #
-# #
-# #     @classmethod
-# #     def get_hood(cls,id):
-# #         hood = Hood.objects.get(id=id)
-# #         return hood
+# class Hood(models.Model):
+#     name = models.CharField(max_length=20,unique=True)
+#     residents = models.IntegerField(default=1)
+#     county = models.CharField(max_length=20)
 #
-# class Post(models.Model):
-#     title = models.CharField(max_length=30)
-#     post = models.TextField(max_length=100)
-#     hood = models.ForeignKey(Hood, related_name='hood')
-#     poster = models.ForeignKey(User, on_delete=models.CASCADE)
-#
-#     def save_post(self):
+#     def save_hood(self):
 #         self.save()
 #
-#     def remove_post(self):
+#     def remove_hood(self):
 #         self.delete()
+#
 #
 #     @classmethod
-#     def get_hood_posts(cls, id):
-#         posts = Post.objects.filter(id=id)
-#         return posts
-#
-#
-# class Comment(models.Model):
-#     comment = models.CharField(max_length=100)
-#     commentator = models.ForeignKey(User)
-#     comment_post = models.ForeignKey(Post, related_name='comment', null=True)
-#
-#     def save_comment(self):
-#         self.save()
-#
-#     def delete_comment(self):
-#         self.delete()
-#
-#
+#     def get_hood(cls,id):
+#         hood = Hood.objects.get(id=id)
+#         return hood
+
+class Post(models.Model):
+    title = models.CharField(max_length=30)
+    post = models.TextField(max_length=100)
+    hood = models.ForeignKey(Hood, related_name='hood')
+    poster = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def save_post(self):
+        self.save()
+
+    def remove_post(self):
+        self.delete()
+
+    @classmethod
+    def get_hood_posts(cls, id):
+        posts = Post.objects.filter(id=id)
+        return posts
+
+
+class Comment(models.Model):
+    comment = models.CharField(max_length=100)
+    commentator = models.ForeignKey(User)
+    comment_post = models.ForeignKey(Post, related_name='comment', null=True)
+
+    def save_comment(self):
+        self.save()
+
+    def delete_comment(self):
+        self.delete()
+
+
 # class Business(models.Model):
 #     name = models.CharField(max_length=20)
 #     owner = models.ForeignKey(User, on_delete=models.CASCADE)
