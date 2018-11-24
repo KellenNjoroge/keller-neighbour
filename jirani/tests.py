@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 # Create your tests here.
 class ProfileTest(TestCase):
     def setUp(self):
-        self.user = User(username = 'Ras_Kwesi', email = 'ras@ras.com', password = 'passwadd')
+        self.user = User(username = 'Keller', email = 'keller@keller.com', password = 'passwadd')
         self.user.save()
         self.ras = Profile(bio = 'A python Programmer',contact = '054234444', user = self.user)
 
@@ -25,7 +25,7 @@ class ProfileTest(TestCase):
 
 class HoodTest(TestCase):
     def setUp(self):
-        self.user = User(username='Ras_Kwesi', email='ras@ras.com', password='passwadd')
+        self.user = User(username='Keller', email='keller@keller.com', password='passwadd')
         self.user.save()
         self.ras = Profile(bio='A python Programmer', contact='054234444', user=self.user)
         self.hood = Hood(name = 'Ngong',bio = "Milimani",admin = self.user)
@@ -68,7 +68,7 @@ class BusinessTest(TestCase):
 
 class PostTest(TestCase):
     def setUp(self):
-        self.user = User(username='Ras_Kwesi', email='ras@ras.com', password='passwadd')
+        self.user = User(username='Keller', email='keller@keller.com', password='passwadd')
         self.user.save()
         self.ras = Profile(bio='A python Programmer', contact='054234444', user=self.user)
         self.hood = Hood(name='Ngong', bio="Milimani", admin=self.user)
@@ -93,7 +93,7 @@ class PostTest(TestCase):
 
 class CommentTest(TestCase):
     def setUp(self):
-        self.user = User(username='Ras_Kwesi', email='ras@ras.com', password='passwadd')
+        self.user = User(username='Keller', email='keller@keller.com', password='passwadd')
         self.user.save()
         self.ras = Profile(bio='A python Programmer', contact='054234444', user=self.user)
         self.hood = Hood(name='Ngong', bio="Milimani", admin=self.user)
