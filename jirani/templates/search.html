@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    {% if businesses %}
+    <h2>Found {{ businesses|length }} projects with related to {{message}}</h2>
+    {% else %}
+    <h2> Found 0 users related to {{message}}</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+    <h1>here</h1>
+
+    {% if businesses %}
+    {% for business in businesses %}
+    <div class="col-sm-6 col-md-3">
+      <div class="card">
+        <h1 class="card-header">{{business.name}}</h1>
+        <p class="card-header">{{business.business_description | truncatechars:30}}</p>
+        <p class="card-text">{{business.locale}}</p>
+
+        <a class="btn btn-success" href="/business/{{business.id}}">View Business Posts</a>
+          <div class="card-footer bg-transparent border-danger">
+                <p>{{business.business_number}}</p>
+            </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
