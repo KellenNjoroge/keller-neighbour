@@ -7,11 +7,11 @@ from .forms import *
 
 
 # Create your views here.
-def welcome(request):
-    return HttpResponse('Welcome to the Keller Jirani')
+# def welcome(request):
+#     return HttpResponse('Welcome to the Keller Jirani')
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def index(request):
     current_user = request.user
     hood_name = current_user.profile.hood
@@ -31,7 +31,7 @@ def communities(request):
     return render(request, 'communities.html', {'hoods': hoods})
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def profile(request):
     current_user = request.user
     hood_name = current_user.profile.hood
@@ -44,7 +44,7 @@ def profile(request):
                                             'hood_name': hood_name})
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 @transaction.atomic
 def update(request):
     # current_user = User.objects.get(pk=user_id)
@@ -83,7 +83,7 @@ def comment(request, id):
     return redirect('index')
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def hood(request, hood_id):
     current_user = request.user
     hood_name = current_user.profile.hood

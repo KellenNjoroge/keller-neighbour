@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07d4ad5e-246d-4d82-99d5-2fb788bee0cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/choosehood.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/communities.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hood.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/newhood.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/newpost.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jirani/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jirani/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keller/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/keller/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +15,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jirani/templates/registration/base.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/keller/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding>
+                <element signature="e#640#680#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jirani/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1646">
+              <caret line="85" selection-start-line="85" selection-end-line="85" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jirani/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -46,17 +67,20 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/keller/urls.py" />
         <option value="$PROJECT_DIR$/keller/settings.py" />
         <option value="$PROJECT_DIR$/jirani/models.py" />
         <option value="$PROJECT_DIR$/jirani/admin.py" />
         <option value="$PROJECT_DIR$/jirani/tests.py" />
         <option value="$PROJECT_DIR$/jirani/forms.py" />
-        <option value="$PROJECT_DIR$/jirani/views.py" />
-        <option value="$PROJECT_DIR$/jirani/urls.py" />
         <option value="$PROJECT_DIR$/jirani/templates/add_business.html" />
         <option value="$PROJECT_DIR$/jirani/templates/base.html" />
         <option value="$PROJECT_DIR$/jirani/templates/business.html" />
+        <option value="$PROJECT_DIR$/jirani/templates/registration/base.html" />
+        <option value="$PROJECT_DIR$/jirani/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/jirani/templates/registration/registration_form.html" />
+        <option value="$PROJECT_DIR$/jirani/views.py" />
+        <option value="$PROJECT_DIR$/jirani/urls.py" />
+        <option value="$PROJECT_DIR$/keller/urls.py" />
       </list>
     </option>
   </component>
@@ -81,19 +105,6 @@
               <item name="keller-neighbour" type="b2602c69:ProjectViewProjectNode" />
               <item name="keller-neighbour" type="462c0819:PsiDirectoryNode" />
               <item name="jirani" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="keller-neighbour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keller-neighbour" type="462c0819:PsiDirectoryNode" />
-              <item name="jirani" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="keller-neighbour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keller-neighbour" type="462c0819:PsiDirectoryNode" />
-              <item name="jirani" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="keller-neighbour" type="b2602c69:ProjectViewProjectNode" />
@@ -140,7 +151,7 @@
     <frame x="0" y="27" width="673" height="739" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.51384616" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26615384" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -181,16 +192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keller/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#640#680#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -251,26 +252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jirani/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jirani/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jirani/templates/add_business.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -292,8 +273,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jirani/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jirani/templates/registration/registration_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jirani/templates/registration/base.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jirani/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1646">
+          <caret line="85" selection-start-line="85" selection-end-line="85" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jirani/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keller/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="e#640#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
