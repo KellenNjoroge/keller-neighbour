@@ -1,7 +1,6 @@
-# My files
- .idea/
- .env
- virtual/
+# myfiles
+.idea/
+virtual/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
