@@ -14,9 +14,9 @@
             <h1 class="card-title ">{{post.postings}}</h1>
             <p class="card-text">{{post.post}}</p>
             {% for comment in post.comment.all %}
-            <p class = "card-text text-success"><strong>{{comment.commentator.username}}</strong>: {{comment.comment}}</p>
+            <p class = "card-text "><strong>{{comment.commentator.username}}</strong>: {{comment.comment}}</p>
             {% endfor %}
-            <div class="card-footer bg-transparent border-warning">
+            <div class="card-footer bg-transparent">
             <form  action="/comment/{{post.id}}" method="post" enctype="multipart/form-data">
                 {%csrf_token%}
 
