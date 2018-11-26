@@ -1,5 +1,8 @@
 from django.conf.urls import url
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns=[
     # url('^$',views.welcome,name = 'welcome'),
@@ -18,3 +21,5 @@ urlpatterns=[
     url('^comment/(\d+)', views.comment, name='comment'),
     url('^join/(\d+)', views.join, name='join'),
 ]
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
