@@ -11,18 +11,18 @@
                 <div class="card-body ">
                     <h1 class="card-title">{{post.postings}}</h1>
                     <p class="card-text">{{post.post}}</p>
-                    <div class="card-body">
-                        {% for comment in image.comment.all %}
-                            <p class="cart-text"><strong>{{comment.commentator.username}}</strong>{{comment.comment}}</p>
-                        {% endfor %}
-                        <form  action="/comment/{{post.id}}" method="post" enctype="multipart/form-data">
-                            {%csrf_token%}
+                    <!--<div class="card-body">-->
+                        <!--{% for comment in image.comment.all %}-->
+                            <!--<p class="cart-text"><strong>{{comment.commentator.username}}</strong>{{comment.comment}}</p>-->
+                        <!--{% endfor %}-->
+                        <!--<form  action="/comment/{{post.id}}" method="post" enctype="multipart/form-data">-->
+                            <!--{%csrf_token%}-->
 
-                            {% bootstrap_form comment_form %}
-                            <input type="submit" class="btn btn-success btn-lg" value="Post">
-                        </form>
+                            <!--{% bootstrap_form comment_form %}-->
+                            <!--<input type="submit" class="btn btn-success btn-lg" value="Post">-->
+                        <!--</form>-->
 
-                </div>
+                <!--</div>-->
             </div>
         </div>
 
