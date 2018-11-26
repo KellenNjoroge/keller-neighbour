@@ -21,6 +21,12 @@ class Hood(models.Model):
         hood = Hood.objects.get(id=id)
         return hood
 
+    # @classmethod
+    # def hood_comments(cls, id):
+    #     comments = cls.objects.filter(hoodcomments__comment_id=id)
+    #     posters = cls.objects.filter(hoodcomments__commnetator__id=id)
+    #     return comments, posters
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
@@ -43,23 +49,6 @@ class Profile(models.Model):
         return self.user.username
 
 
-# class Hood(models.Model):
-#     name = models.CharField(max_length=20,unique=True)
-#     residents = models.IntegerField(default=1)
-#     county = models.CharField(max_length=20)
-#
-#     def save_hood(self):
-#         self.save()
-#
-#     def remove_hood(self):
-#         self.delete()
-#
-#
-#     @classmethod
-#     def get_hood(cls,id):
-#         hood = Hood.objects.get(id=id)
-#         return hood
-
 class Post(models.Model):
     title = models.CharField(max_length=30)
     post = models.TextField(max_length=100)
@@ -76,6 +65,12 @@ class Post(models.Model):
     def get_hood_posts(cls, id):
         posts = Post.objects.filter(id=id)
         return posts
+
+    @classmethod
+    def post_comments(cls, id):
+        comments = cls.objects.filter(postcomments__comment_id=id)
+        posters = cls.objects.filter(postcomments__commnetator__id=id)
+        return comments, posters
 
 
 class Comment(models.Model):

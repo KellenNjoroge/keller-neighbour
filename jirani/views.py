@@ -1,9 +1,10 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from .models import *
 from .forms import *
+from peewee import DoesNotExist
 
 
 # Create your views here.
@@ -19,9 +20,14 @@ def index(request):
         # hoods = Hood.objects.all()
         return redirect('communities')
 
-    posts = Post.objects.all()
+    try:
+        posts = Post.objects.all()
+        form = NewComment(instance=request.user)
+        comments = Comment.objects.all()
+    except DoesNotExist:
+        raise Http404()
 
-    return render(request, 'index.html', {'posts': posts, 'hood_name': hood_name})
+    return render(request, 'index.html', {'posts': posts, 'hood_name': hood_name, 'comment_form': form, 'comm': comments})
 
 
 def communities(request):
