@@ -1,36 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="card">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="col-md-4">
-
-                {% if profile.avatar %}
-                <img  class="profpic" src="{{profile.profilepic.url}}" height='400' alt="No Image">
-                {% else %}
-             <div >
-                <img  class="profpic" src="https://www.w3schools.com/howto/img_avatar.png" alt="card image cap">
-             </div>
-
-                {% endif %}
-            </div>
-            <div class="col-md-4">
-                <div class="row">
-                    <h1> Name    {{profile.user.username}}</h1>
-                    <h1>  emails {{profile.user.email}}</h1>
-                    <!--<a href="" class="btn btn-light" >Edit Profile</a>-->
+        <div class="card">
+                <div class="card">
+                      <style>
+                              img-circle {
+                              border-radius: 70%;
+                              }
+                      </style>
+                     {% if profile.avatar %}
+                        <img class="profpic"  src="{{profile.profilepic.url}}" class= 'img-circle' height='236' width="304" alt="Image" class="img-responsive">
+                     {% else %}
+                     <div >
+                        <img  class="profpic" src="https://www.w3schools.com/howto/img_avatar.png" alt="card image cap">
+                     </div>
+                     {% endif %}
                 </div>
-                <div class="row">
-                    <h1> Posts</h1> </br>
-                    <h1> Followers</h1>
-                    <h1> Following</h1>
+                <div class="card">
+                    <ul>
+                        <h1>{{profile.user.username}}</h1>
+                        <div class="card" ><a href="/update" class = 'text-center'>Edit profile</a> </div>
+                    </ul>
+                    <p class="card-body">{{profile.user.profile.bio}}</p>
+                        <h3> Projects</h3>
+                        <h3> Followers</h3>
+                        <h3> Following</h3>
                 </div>
-                <div class="row">
-                    <p>{{profile.user.profile.bio}}</p>
-                </div>
-            </div>
         </div>
-    </div>
 </div>
 <div class="row">
     <div class="col-md-6 offset-md-3">
@@ -46,6 +42,4 @@
         {% endfor %}
     </div>
 </div>
-
 {% endblock %}
-
