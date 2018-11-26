@@ -11,9 +11,7 @@
     - SQL
     - Ajax
 
-It has the following features
-
-    ## Built by [Kellen Njoroge](https://github.com/KellenNjoroge)
+## Built by [Kellen Njoroge](https://github.com/KellenNjoroge)
 
 ## Technologies Used
 
